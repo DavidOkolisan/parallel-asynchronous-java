@@ -62,7 +62,6 @@ public class DataSet {
     }
 
 
-
     public static double generateRandomPrice() {
         int min = 50;
         int max = 100;

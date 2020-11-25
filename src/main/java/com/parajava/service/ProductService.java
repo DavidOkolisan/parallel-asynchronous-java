@@ -3,6 +3,7 @@ package com.parajava.service;
 import com.parajava.domain.Product;
 import com.parajava.domain.ProductInfo;
 import com.parajava.domain.Review;
+
 import static com.parajava.util.CommonUtil.stopWatch;
 import static com.parajava.util.LoggerUtil.log;
 
@@ -22,7 +23,7 @@ public class ProductService {
         Review review = reviewService.retrieveReviews(productId); // blocking call
 
         stopWatch.stop();
-        log("Total Time Taken : "+ stopWatch.getTime());
+        log("Total Time Taken : " + stopWatch.getTime());
         return new Product(productId, productInfo, review);
     }
 

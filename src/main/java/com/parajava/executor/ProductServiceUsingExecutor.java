@@ -25,15 +25,15 @@ public class ProductServiceUsingExecutor {
     public Product retrieveProductDetails(String productId) throws ExecutionException, InterruptedException, TimeoutException {
         stopWatch.start();
 
-        Future<ProductInfo> productInfoFuture = executorService.submit(()->productInfoService.retrieveProductInfo(productId));
-        Future<Review> reviewFuture = executorService.submit(()->reviewService.retrieveReviews(productId));
+        Future<ProductInfo> productInfoFuture = executorService.submit(() -> productInfoService.retrieveProductInfo(productId));
+        Future<Review> reviewFuture = executorService.submit(() -> reviewService.retrieveReviews(productId));
 
         //ProductInfo productInfo = productInfoFuture.get();
         ProductInfo productInfo = productInfoFuture.get(2, TimeUnit.SECONDS);
-        Review  review = reviewFuture.get();
+        Review review = reviewFuture.get();
 
         stopWatch.stop();
-        log("Total Time Taken : "+ stopWatch.getTime());
+        log("Total Time Taken : " + stopWatch.getTime());
         return new Product(productId, productInfo, review);
     }
 
