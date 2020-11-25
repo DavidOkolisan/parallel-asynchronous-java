@@ -1,4 +1,4 @@
-package com.learnjava.forkjoin;
+package com.parajava.forkjoin;
 
 import com.parajava.util.DataSet;
 
