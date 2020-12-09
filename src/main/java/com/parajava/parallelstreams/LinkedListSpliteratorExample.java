@@ -1,4 +1,4 @@
-package com.learnjava.parallelstreams;
+package com.parajava.parallelstreams;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.learnjava.util.CommonUtil.startTimer;
-import static com.learnjava.util.CommonUtil.timeTaken;
+import static com.parajava.util.CommonUtil.startTimer;
+import static com.parajava.util.CommonUtil.returnTime;
 
 public class LinkedListSpliteratorExample {
 
@@ -24,7 +24,7 @@ public class LinkedListSpliteratorExample {
                 .map(integer -> integer*multiplyValue)
                 .collect(Collectors.toList());
 
-        timeTaken();
+        returnTime();
         return resultList;
     }
 }

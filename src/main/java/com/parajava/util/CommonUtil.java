@@ -24,14 +24,14 @@ public class CommonUtil {
     }
 
     public static void startTimer() {
+        log("[INFO] Starting timer...");
         stopWatch.start();
     }
 
-    public static void timeTaken() {
+    public static void returnTime() {
         stopWatch.stop();
-        log("Total Time Taken : " + stopWatch.getTime());
+        log("[INFO] Total Time Taken : " + stopWatch.getTime());
     }
-
     public static void stopWatchReset() {
         stopWatch.reset();
     }
@@ -40,3 +40,4 @@ public class CommonUtil {
         return Runtime.getRuntime().availableProcessors();
     }
 }
+

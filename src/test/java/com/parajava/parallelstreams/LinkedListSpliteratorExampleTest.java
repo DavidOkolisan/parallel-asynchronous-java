@@ -1,6 +1,6 @@
-package com.learnjava.parallelstreams;
+package com.parajava.parallelstreams;
 
-import com.learnjava.util.DataSet;
+import com.parajava.util.DataSet;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
