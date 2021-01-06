@@ -9,19 +9,19 @@ public class HelloWorldService {
 
     public String helloWorld() {
         delay(1000);
-        log("inside helloWorld");
+        log("helloWorld() method called.");
         return "hello world";
     }
 
     public String hello() {
         delay(1000);
-        log("inside hello");
+        log("hello() method called.");
         return "hello";
     }
 
     public String world() {
         delay(1000);
-        log("inside world");
+        log("world() method called.");
         return " world!";
     }
 
